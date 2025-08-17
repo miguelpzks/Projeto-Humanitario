@@ -1,7 +1,12 @@
+package service;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class ConectaVoluntario{
+import models.Tarefa;
+import models.Voluntario;
+
+public class ConectaVoluntarioService{
     // Map para prganizar voluntarios pelo ID
     private Map<String, Voluntario> voluntarios = new HashMap<>();
 
@@ -9,7 +14,7 @@ public class ConectaVoluntario{
     private Map<String, Tarefa> tarefas = new HashMap<>();
 
     // Contrutor
-    public ConectaVoluntario(){}
+    public ConectaVoluntarioService(){}
 
     // GERENCIAMENTO
 
@@ -38,7 +43,7 @@ public class ConectaVoluntario{
     public Set<Voluntario> listarVoluntariosDisponiveis(String titulo) {
         Tarefa t = tarefas.get(titulo);
         if (t != null) {
-            return t.getVoluntarios();
+            return new HashSet<>(t.getVoluntarios());
         }
         return new HashSet<>();
     }

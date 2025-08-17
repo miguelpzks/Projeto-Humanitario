@@ -1,3 +1,6 @@
+package models;
+
+
 public class Voluntario {
     private String nome;
     private String contato;

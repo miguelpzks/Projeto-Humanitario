@@ -29,20 +29,22 @@ body {
 
 .header {
     width: 100%;
-    position: fixed;
+    position: flex;
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.45);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    z-index: 1000;
-    padding: 15px 0;
+    z-index: 999;
 }
 
-.header .container {
+.header-container {
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 22px;
+    background: linear-gradient(135deg, #3B82F6 0%, #A78BFA 100%);;
 }
 
 .nav-links {
@@ -76,6 +78,10 @@ body {
     padding-top: 120px;
 }
 
+.hero p {
+    padding: 25px 0px;
+}
+
 .hero-container h1 {
     font-size: 3rem;
     max-width: 600px;
@@ -89,13 +95,14 @@ body {
 }
 
 .btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 14px 30px;
+    display: fixed;
+    margin-top: 0px;
+    padding: 20px 50px;
     background: #00aaff;
     color: #fff;
     text-decoration: none;
-    border-radius: 6px;
+    
+    border-radius: 12px;
     font-weight: 600;
     transition: .3s;
 }
